@@ -27,6 +27,10 @@ app = Flask(__name__)
 # three forward slashes is a relative path and four are an absolute path
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
+# addition here cuz when deploying on render, an error happens as the db is still not created
+with app.app_context():
+    db.create_all()
+
 
 # to initialize the data base we will create a model starting with a class
 # we set up some columns
