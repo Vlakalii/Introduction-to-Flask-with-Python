@@ -27,9 +27,6 @@ app = Flask(__name__)
 # three forward slashes is a relative path and four are an absolute path
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///test.db'
 db = SQLAlchemy(app)
-# addition here cuz when deploying on render, an error happens as the db is still not created
-with app.app_context():
-    db.create_all()
 
 
 # to initialize the data base we will create a model starting with a class
@@ -49,6 +46,14 @@ class Todo(db.Model):
 # after that is done, we need to create and setup our db in the shell
 # from app import db -> this imports our db object
 # db.create_all() -> this should create our database!
+
+
+
+
+# addition here cuz when deploying on render, an error happens as the db is still not created
+with app.app_context():
+    db.create_all()
+
 
 
 # db.create_all() tells sqlalchemy to look at all the models (classes like todo) that were defined
