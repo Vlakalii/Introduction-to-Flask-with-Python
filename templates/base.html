@@ -1,0 +1,19 @@
+<!-- creating a master boiler plate that all other pages inherit from so you wouldnt need to keep copying it each time -->
+<!DOCTYPE html>
+<!-- this is a boiler plate template that many pages could use where we block the spots where the code could change depending on what we want for each page.
+moving on to the different html files where each other page would be defined, one could extend this base.html and add the designs they wish for their pages there!!-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- here we will link the css file we created -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css')}}">
+<!-- this is a jinja 2 syntax which is a template engine that flask uses. 
+    Here we are inserting a block in the template and this is where we are going to insert code on all other pages that are going to inherit this template -->
+    {% block head %}{% endblock %}
+  </head>
+  <body>
+    {% block body %}{% endblock %}
+  </body>
+</html>

@@ -1,0 +1,116 @@
+/* this is a basic css file to add to the html data file.
+it was called in the base.html file to define how the font would be and that the 
+margin is 0 meaning the text is at the left edge leaving no space.*/
+/*body{
+	margin: 100;
+	font-family: sans-serif;
+}
+*/
+
+/* Container */
+.content {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+.content h1 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+}
+
+tr:hover {
+  background-color: #f1f8ff;
+}
+
+/* Links as buttons */
+a {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 2px 0;
+  color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+a[href*="delete"] {
+  background-color: #dc3545; /* red */
+}
+
+a[href*="delete"]:hover {
+  background-color: #b02a37;
+}
+
+a[href*="update"] {
+  background-color: #28a745; /* green */
+}
+
+a[href*="update"]:hover {
+  background-color: #1c7c31;
+}
+
+/* Form styling */
+form {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+input[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
